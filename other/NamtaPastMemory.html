@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namta page as one of my memory</title>
+
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+IN+Guides&display=swap" rel="stylesheet">
+
+
+    <style>
+        *{
+            text-align: center;
+        }
+        body{
+            background-image: url("flower.png");
+            background-size: cover;
+        }
+        #topPart{
+            border:2px solid black;
+            display:inline-block;
+            background-color: rgb(77, 255, 77);
+            padding:20px;
+            border-radius: 5px;
+            box-shadow: 7px 7px 12px 5px black;
+        }
+        #btn1{
+            background-color: #3333ff;
+            color:white;
+            border-radius: 4px;
+        }
+        #clrBtn{
+            background-color: #e6f0ff;
+            color:white;
+            border-radius: 4px;
+        }
+        input{
+            width:50px;
+            border-radius: 4px;
+        }
+        h1{
+            font-family: "Sixtyfour Convergence", serif;
+            border-radius: 4px;
+            padding:4px;
+        }
+        label{
+            font-family: "Playwrite IN Guides", serif;
+            border-radius: 4px;
+            padding:4px;
+        }
+        #sec1{
+            margin-top:17px;
+            padding:6px;
+            border-radius: 4px;
+        }
+        #folafolDiv{
+            border:3px solid black;
+            border-radius: 5px;
+            background-color: #ffff99;
+            margin-top:17px;
+            display: inline-block;
+            box-shadow: 7px 7px 12px 5px black;
+            padding: 0px 20px;
+        }
+        #folafolDiv>p{
+            background-color: #ffff99;
+        }
+        #folafol>p{
+            background-color: #ffff99;
+            padding:9px;
+            font-family: "Alfa Slab One", serif;
+        }
+        #handWritten{
+            font-size: larger;
+        }
+    </style>
+</head>
+<body id="body">
+    <div id="topPart">
+        <h1>Namta</h1>
+        <label><b id="handWritten">Je ghor ar namta dekte chao seta type kore enter dao:</b></label> <br/>
+        <section id="sec1">
+            <input id="givenNumber" value="" type="number">
+            <button id="btn1" onclick="diyaci()">Diyaci</button>
+            <button id="clrBtn" onclick="notunAsha()" disabled>Onnoti chesta koro</button>
+        </section>
+    </div> <br/>
+    <div id="folafolDiv">
+        <section id="folafol">
+
+        </section>
+        <p id="manush">👥</p>
+        <p><a style="text-decoration: none;" href="tel:01780303302">📞</a></p>
+        <p id="mood">😔</p>
+        <p id="colorP">♻️</p>
+    </div>
+    <p>Tumi ai page e refresh ar age click korecho <span id="clickKora">0</span> bar!</p>
+    <script>
+        let gN=document.getElementById("givenNumber");
+        let ffl=document.getElementById("folafol");
+        let manush=document.getElementById("manush");
+        manush.addEventListener("click",alertDakhao);
+        function alertDakhao(){
+            alert('Nicher call ar icon e click kore amake call dite paro!')
+        }
+        let mood=document.getElementById("mood");
+        mood.addEventListener("click",poriborton);
+        function poriborton(){
+            mood.innerHTML="😄"
+        }
+        let topPart=document.getElementById("topPart");
+        document.getElementById("colorP").addEventListener("click",colorP);
+        function colorP(){
+            topPart.style.backgroundColor="#ffccff";
+        }
+        let count=0;
+        let clickKora=document.getElementById("clickKora");
+        document.getElementById("body").addEventListener("click",countDakhao);
+        function countDakhao(){
+            count=count+1;
+            clickKora.innerHTML=count;
+        }
+        const shobdo=new Audio("click.wav");
+        function diyaci(){
+            shobdo.play();
+            let gNValue=gN.value;
+            if(gNValue==""){
+                alert('Kono number dao nay!');
+            }
+            else if(gNValue.length>=5){
+                alert('Number ti onek boro');
+            }
+            else{
+                for(let i=0;i<=10;i++){
+                    let k= gNValue*i;
+                    let notun=document.createElement("p");
+                    notun.textContent=gNValue+" "+" "+" "+" "+" "+"×"+" "+" "+" "+" "+" "+i+" "+" "+" "+" "+" "+" = "+" "+" "+" "+" "+" "+k;
+                    ffl.appendChild(notun);
+                }
+                document.getElementById('btn1').disabled=true;
+                document.getElementById('clrBtn').disabled=false;
+                document.getElementById('btn1').style.backgroundColor="#e6f0ff";
+                document.getElementById('clrBtn').style.backgroundColor="#3333ff";
+            }
+        }
+
+        function notunAsha(){
+            location.reload();
+        }
+
+        
+    </script>
+</body>
+</html>
