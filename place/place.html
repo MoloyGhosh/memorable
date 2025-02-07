@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ভ্রমণ করা স্থান</title>
+    <style>
+        *{
+            background-color:  #66ff66;
+            margin:0;
+        }
+        h1{
+            text-align: center;
+            color:#003300;
+            padding: 11px;
+        }
+        a{
+            background-color: #00e600;
+            color:#331a00;
+            text-decoration:none;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        li{
+            background-color: #00e600;
+            border:2px solid #ffff00;
+            padding:15px;
+            margin-right:18px;
+            margin-bottom:3px;
+            transition:0.4s;
+            opacity:.7;
+        }
+        li:hover{
+            opacity: 1;
+        }
+        #copy{
+            float:right;
+        }
+        #topDiv{
+            height:27px;
+            background-color: hsl(0, 100%, 70%);
+        }
+        footer{
+            margin-top: 25px;
+        }
+        #somoy{
+            background-color:rgb(129, 172, 193);
+            display:inline-block;
+            padding: 4px 37px;
+            color: rgb(108, 108, 106);
+        }
+    </style>
+</head>
+<body>
+    <div id="topDiv">
+        <marquee><p id="somoy"></p></marquee>
+    </div>
+    <h1>দর্শনীয় স্থানসমূহ</h1>
+    <hr>
+    <div>
+        <ul>
+            <li><a href="mongla/mongla.html">মোংলা ফেরি ঘাট</a></li>
+            <li><a href="pirojpur/pirojpur.html">পিরোজপুর, শিয়ালকাঠি</a></li>
+            <!--<li><a href=""></a></li>-->
+            <li><a href="">কুয়াকাটা সমুদ্র সৈকত</a></li>
+        </ul>
+    </div>
+    <footer>
+        <p id="copy">&copy; Moloy</p>
+    </footer>
+    <script>
+        let somoy=new Date();
+        document.getElementById("somoy").innerHTML=somoy;
+    </script>
+</body>
+</html>
