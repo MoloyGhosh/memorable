@@ -39,6 +39,7 @@
             padding:9px;
             border-radius: 5px;
             font-family: "EB Garamond", serif;
+            width:450px;
         }
         a:hover{
             color:rgb(226, 245, 114);
@@ -84,11 +85,17 @@
             color:blanchedalmond;
             text-decoration: none;
         }
+        #tarik{
+            background-color:#ff4dff;
+            padding:6px;
+            color:rgb(51, 51, 0);
+        }
 
     </style>
 </head>
 <body>
     <div>
+        <marquee id="tarik"></marquee>
         <h1>Some memorable days</h1> <br/>
         <img src="other/Moloy.jpg"/>
         <fieldset>
@@ -116,6 +123,48 @@
         <button id="fun"><a id="funa" href="other/NamtaPastMemory.html" title="purano sriti mone kore">Namta</a></button>
         <button id="fun"><a id="funa" href="Note/note.html">Note</a></button>
     </div>
+
+
+    <script>
+        let tarik=new Date();
+        let chotoSomoy=tarik.getMilliseconds();
+        let din=tarik.getDate();
+        let oMash=tarik.getMonth();
+        let bocor=tarik.getFullYear();
+        let mash="";
+        let bmash=""
+        if (oMash==0) mash="January";
+        else if (oMash==1) mash="February";
+        else if (oMash==2) mash="March";
+        else if (oMash==3) mash="April";
+        else if (oMash==4) mash="May";
+        else if (oMash==5) mash="June";
+        else if (oMash==6) mash="July";
+        else if (oMash==7) mash="August";
+        else if (oMash==8) mash="September";
+        else if (oMash==9) mash="October";
+        else if (oMash==10) mash="November";
+        else oMash="December";
+
+        if (oMash==0) bmash="জানুয়ারি";
+        else if (oMash==1) bmash="ফেব্রুয়ারি";
+        else if (oMash==2) bmash="মার্চ";
+        else if (oMash==3) bmash="এপ্রিল";
+        else if (oMash==4) bmash="মে";
+        else if (oMash==5) bmash="জুন";
+        else if (oMash==6) bmash="জুলাই";
+        else if (oMash==7) bmash="আগস্ট";
+        else if (oMash==8) bmash="সেপ্টেম্বর";
+        else if (oMash==9) bmash="অক্টোবর";
+        else if (oMash==10) bmash="নভেম্বর";
+        else bmash="ডিসেম্বর";
+
+        document.getElementById('tarik').innerHTML="Today is "+din+" "+mash+" "+bocor+" &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp &nbsp "+chotoSomoy;
+        document.getElementById('tarik').addEventListener("click",bangla);
+        function bangla(){
+            document.getElementById('tarik').innerHTML="আজ হয় "+din+" "+bmash+"। "+"আপনার দিনটি শুভ হোক! "+"এবং আনন্দে কাটুক।"
+        }
+    </script>
     
 </body>
 </html>
