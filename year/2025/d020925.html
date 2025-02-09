@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>09 February 2025</title>
+    <style>
+        *{
+            background-color: black;
+            color:white;
+        }
+        img{
+            width:100%;
+        }
+        #container{
+            display:grid;
+            grid-template-columns: auto auto;
+            grid-row-gap:10px;
+            grid-column-gap: 10px;
+        }
+        h1{
+            text-align: center;
+        }
+        #footerP{
+            float: left;
+        }
+        #ponero{
+            border: 3px solid rgb(35, 2, 152);
+        }
+    </style>
+</head>
+<body>
+    <h1 id="heading">09 February 2025</h1> <hr>
+    <div id="container">
+        <div class="img-sec">
+            <img src="d020925/1.jpg" alt="" title="">
+            <p></p>
+        </div>
+        <div>
+            <img src="d020925/2.jpg" id="ear" alt="" title="✨">
+            <p id="likha"></p>
+        </div>
+    </div>
+    <p id="footerP">&copy Moloy</p>
+    <script>
+        document.getElementById("ear").addEventListener("click",likhaAsbe);
+        function likhaAsbe(){
+            document.getElementById("likha").innerHTML="Looks like an ear ring!";
+            document.getElementById("heading").style.color="hsl(336, 100%, 55%)";
+        }
+    </script>
+</body>
+</html>
