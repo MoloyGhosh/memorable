@@ -107,6 +107,7 @@
         <p><a style="text-decoration: none;" href="tel:01780303302">📞</a></p>
         <p id="mood">😔</p>
         <p id="colorP">♻️</p>
+        <p id="kanna">😊</p>
     </div>
     <p>Tumi ai page e refresh ar age click korecho <span id="clickKora">0</span> bar!</p>
     <script>
@@ -160,6 +161,11 @@
 
         function notunAsha(){
             location.reload();
+        }
+
+        document.getElementById("kanna").addEventListener("click",kannaKoro);
+        function kannaKoro(){
+            document.getElementById("kanna").innerHTML="😭";
         }
 
         
