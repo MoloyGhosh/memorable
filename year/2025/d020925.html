@@ -27,6 +27,9 @@
         #ponero{
             border: 3px solid rgb(35, 2, 152);
         }
+        #apple{
+            border:2px solid #00ff00;
+        }
     </style>
 </head>
 <body>
@@ -40,10 +43,18 @@
             <img src="d020925/2.jpg" id="ear" alt="" title="✨">
             <p id="likha"></p>
         </div>
+        <div class="img-sec">
+            <img id="apple" src="d020925/3.jpg" alt="" title="">
+            <p></p>
+        </div>
     </div>
     <p id="footerP">&copy Moloy</p>
     <script>
+        document.getElementById("apple").addEventListener("click",alertAsbe);
         document.getElementById("ear").addEventListener("click",likhaAsbe);
+        function alertAsbe(){
+            alert("These are apple seeds!")
+        }
         function likhaAsbe(){
             document.getElementById("likha").innerHTML="Looks like an ear ring!";
             document.getElementById("heading").style.color="hsl(336, 100%, 55%)";
